@@ -1,0 +1,35 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+ul > li {
+  margin: 0.5rem;
+}
+
+.logo_cnt {
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  border: 1px solid black;
+  height: 1.5vh;
+  margin: auto 0;
+}
+
+.logo {
+  background-image: url("../logo.png");
+  background-size: contain;
+  width: 4rem;
+  height: 4rem;
+}

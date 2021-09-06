@@ -1,18 +1,25 @@
+/* eslint-disable no-unused-vars */
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   NavLink,
 } from 'react-router-dom';
+import '../assets/styles/Navbar.css';
+import MyProfile from './myProfile.js';
 
-const Navbar = () => {
-  return (
+const Navbar = () => (
 
     <Router>
       <header>
+        <div className="logo_cnt">
+          <div className="logo">
+          </div>
         <h1>
           Space Travelers' Hub
         </h1>
+        </div>
         <nav>
           <ul>
             <li>
@@ -21,6 +28,7 @@ const Navbar = () => {
             <li>
               <NavLink to="/missions" className="link">Missions</NavLink>
             </li>
+            <vr className="line"></vr>
             <li>
               <NavLink to="/myProfile" className="link">My Profile</NavLink>
             </li>
@@ -36,11 +44,10 @@ const Navbar = () => {
           {/* <Missions /> */}
         </Route>
         <Route path="/myProfile">
-          {/* <MyProfile /> */}
+          <MyProfile />
         </Route>
       </Switch>
     </Router>
-  )
-}
+);
 
 export default Navbar;
