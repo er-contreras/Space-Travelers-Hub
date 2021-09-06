@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import './assets/styles/App.css';
 import Navbar from './components/Navbar';
 

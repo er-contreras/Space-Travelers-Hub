@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,47 +5,46 @@ import {
   NavLink,
 } from 'react-router-dom';
 import '../assets/styles/Navbar.css';
-import MyProfile from './myProfile.js';
+import MyProfile from './myProfile';
 
 const Navbar = () => (
 
-    <Router>
-      <header>
-        <div className="logo_cnt">
-          <div className="logo">
-          </div>
+  <Router>
+    <header>
+      <div className="logo_cnt">
+        <div className="logo" />
         <h1>
-          Space Travelers' Hub
+          Space Travelers Hub
         </h1>
-        </div>
-        <nav>
-          <ul>
-            <li>
-              <NavLink to="/" className="link">Rockets</NavLink>
-            </li>
-            <li>
-              <NavLink to="/missions" className="link">Missions</NavLink>
-            </li>
-            <vr className="line"></vr>
-            <li>
-              <NavLink to="/myProfile" className="link">My Profile</NavLink>
-            </li>
-          </ul>
-        </nav>
-        </header>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <NavLink to="/" className="link">Rockets</NavLink>
+          </li>
+          <li>
+            <NavLink to="/missions" className="link">Missions</NavLink>
+          </li>
+          <vr className="line" />
+          <li>
+            <NavLink to="/myProfile" className="link">My Profile</NavLink>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-      <Switch>
-        <Route path="/">
-          {/* <Rockets /> */}
-        </Route>
-        <Route path="/mission">
-          {/* <Missions /> */}
-        </Route>
-        <Route path="/myProfile">
-          <MyProfile />
-        </Route>
-      </Switch>
-    </Router>
+    <Switch>
+      <Route exact path="/">
+        {/* <Rockets /> */}
+      </Route>
+      <Route path="/mission">
+        {/* <Missions /> */}
+      </Route>
+      <Route path="/myProfile">
+        <MyProfile />
+      </Route>
+    </Switch>
+  </Router>
 );
 
 export default Navbar;
