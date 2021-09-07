@@ -19,12 +19,12 @@ const Rockets = () => {
 
   return (
     <div>
-      {console.log(rocketsList)}
-      {/* {rocketsList.map((rocket) => (
-        <div>
-          <h2>Hello</h2>
-        </div>
-      ))} */}
+      {rocketsList.map((rocket) => (
+        console.log(rocket.id)
+        // <div key={rocket.id}>
+        //   <li>{rocket}</li>
+        // </div>
+      ))}
     </div>
   );
 };

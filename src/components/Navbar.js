@@ -10,7 +10,6 @@ import MyProfile from './myProfile';
 import Rockets from './rockets';
 
 const Navbar = () => (
-
   <Router>
     <header>
       <div className="logo_cnt">
