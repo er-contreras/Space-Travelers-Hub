@@ -27,7 +27,7 @@ const Navbar = () => (
           <li>
             <NavLink to="/missions" className="link">Missions</NavLink>
           </li>
-          <hr className="line"></hr>
+          <hr className="line" />
           <li>
             <NavLink to="/myProfile" className="link">My Profile</NavLink>
           </li>

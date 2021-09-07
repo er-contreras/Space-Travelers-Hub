@@ -11,21 +11,23 @@ const rocketsReducer = (state = initialState, action) => {
     case GET_ROCKETS:
       return action.payload;
     case RESERVE_ROCKET: {
-      const newState = state.map((rocket) => {
-        // if (rocket.id !== action.payload) {
-        //   return rocket;
-        // }
-        // return {
-        //   ...rocket,
-        //   reserved: true,
-        // };
-        return rocket.id !== action.payload ? rocket : {...rocket, reserved: true, }
-      });
+      const newState = state.map((rocket) => (rocket.id !== action.payload
+        ? rocket
+        : { ...rocket, reserved: true }));
+      // if (rocket.id !== action.payload) {
+      //   return rocket;
+      // }
+      // return {
+      //   ...rocket,
+      //   reserved: true,
+      // };
 
       return newState;
     }
     case CANCEL_RESERVATION: {
-      const newState = state.map((rocket) => {
+      const newState = state.map((rocket) => (rocket.id !== action.payload
+        ? rocket
+        : { ...rocket, reserved: false }));
         // if (rocket.id !== action.payload) {
         //   return rocket;
         // }
@@ -33,8 +35,6 @@ const rocketsReducer = (state = initialState, action) => {
         //   ...rocket,
         //   reserved: false,
         // };
-        return rocket.id !== action.payload ? rocket : { ...rocket, reserved: false, }
-      });
 
       return newState;
     }

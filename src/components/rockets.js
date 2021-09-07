@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { getRockets, reserveRocket, cancelReservation } from '../redux/rockets/rocketsReducer';
+import {
+  getRockets,
+  reserveRocket, //eslint-disable-line
+  cancelReservation //eslint-disable-line
+}
+  from '../redux/rockets/rocketsReducer';
 
 const Rockets = () => {
   const dispatch = useDispatch();
@@ -22,7 +26,7 @@ const Rockets = () => {
         </div>
       ))} */}
     </div>
-  )
-}
+  );
+};
 
 export default Rockets;
