@@ -29,7 +29,7 @@ const Rockets = () => {
   let reserved = null;
 
   return (
-    <div>
+    <div id={styles.container}>
       {rocketsList.map((rocket) => (
         <ul key={rocket.id}>
           <li>
