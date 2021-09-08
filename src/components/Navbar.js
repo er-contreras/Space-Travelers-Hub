@@ -22,14 +22,14 @@ const Navbar = () => (
       <nav>
         <ul>
           <li>
-            <NavLink to="/" className="link">Rockets</NavLink>
+            <NavLink to="/" activeClassName="link">Rockets</NavLink>
           </li>
           <li>
-            <NavLink to="/missions" className="link">Missions</NavLink>
+            <NavLink to="/missions" activeClassName="link">Missions</NavLink>
           </li>
           <hr className="line" />
           <li>
-            <NavLink to="/myProfile" className="link">My Profile</NavLink>
+            <NavLink to="/myProfile" activeClassName="link">My Profile</NavLink>
           </li>
         </ul>
       </nav>

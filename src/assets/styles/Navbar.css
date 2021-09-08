@@ -22,8 +22,8 @@ ul > li {
 }
 
 .line {
-  border: 1px solid black;
-  height: 1.5vh;
+  border: 1px solid rgb(161, 161, 161);
+  height: 1.8vh;
   margin: auto 0;
 }
 
@@ -32,4 +32,13 @@ ul > li {
   background-size: contain;
   width: 4rem;
   height: 4rem;
+}
+
+.link {
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(97, 174, 253);
 }
