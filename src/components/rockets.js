@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   getRockets,
   reserveRocket,
-  cancelReservation //eslint-disable-line
+  cancelReservation,
 }
   from '../redux/rockets/rocketsReducer';
 import styles from './rockets.module.css';
@@ -26,6 +26,8 @@ const Rockets = () => {
     }
   }, []);
 
+  let reserved = null;
+
   return (
     <div>
       {rocketsList.map((rocket) => (
@@ -39,14 +41,15 @@ const Rockets = () => {
             <li
               className={styles.description}
             >
-              {/* {reserved && (<span className={styles.reserved}>Reserved</span>)} */}
+              {rocket.reserved && (<span className={styles.reserved}>Reserved</span>)}
               {rocket.description}
             </li>
 
             <button
+              className={!rocket.reserved === true ? styles.button : styles.cancel}
               type="button"
               onClick={() => {
-                const { reserved } = rocket;
+                reserved = rocket.reserved;
                 if (!reserved) {
                   reserveRocketHandler(rocket.id);
                 } else {
