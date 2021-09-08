@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,6 +7,7 @@ import {
 } from 'react-router-dom';
 import '../assets/styles/Navbar.css';
 import MyProfile from './myProfile';
+import Rockets from './rockets';
 
 const Navbar = () => (
 
@@ -25,7 +27,7 @@ const Navbar = () => (
           <li>
             <NavLink to="/missions" className="link">Missions</NavLink>
           </li>
-          <vr className="line" />
+          <hr className="line" />
           <li>
             <NavLink to="/myProfile" className="link">My Profile</NavLink>
           </li>
@@ -35,7 +37,7 @@ const Navbar = () => (
 
     <Switch>
       <Route exact path="/">
-        {/* <Rockets /> */}
+        <Rockets />
       </Route>
       <Route path="/mission">
         {/* <Missions /> */}
