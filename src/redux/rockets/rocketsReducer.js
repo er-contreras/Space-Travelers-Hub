@@ -10,34 +10,20 @@ const rocketsReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_ROCKETS:
       return action.payload;
-      // case RESERVE_ROCKET: {
-      //   const newState = state.map((rocket) => (rocket.id !== action.payload
-      //     ? rocket
-      //     : { ...rocket, reserved: true }));
-      // if (rocket.id !== action.payload) {
-      //   return rocket;
-      // }
-      // return {
-      //   ...rocket,
-      //   reserved: true,
-      // };
+    case RESERVE_ROCKET: {
+      const newState = state.map((rocket) => (rocket.id !== action.payload
+        ? rocket
+        : { ...rocket, reserved: true }));
 
-      // return newState;
-      // }
-      // case CANCEL_RESERVATION: {
-      //   const newState = state.map((rocket) => (rocket.id !== action.payload
-      //     ? rocket
-      //     : { ...rocket, reserved: false }));
-      //     // if (rocket.id !== action.payload) {
-      //     //   return rocket;
-      //     // }
-      //     // return {
-      //     //   ...rocket,
-      //     //   reserved: false,
-      //     // };
+      return newState;
+    }
+    case CANCEL_RESERVATION: {
+      const newState = state.map((rocket) => (rocket.id !== action.payload
+        ? rocket
+        : { ...rocket, reserved: false }));
 
-      //   return newState;
-      // }
+      return newState;
+    }
     default:
       return state;
   }
