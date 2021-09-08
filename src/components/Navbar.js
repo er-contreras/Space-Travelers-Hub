@@ -10,7 +10,6 @@ import MyProfile from './myProfile';
 import Missions from './missionsList';
 import Rockets from './rockets';
 
-
 const Navbar = () => (
   <Router>
     <header>
