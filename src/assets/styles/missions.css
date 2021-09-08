@@ -1,0 +1,42 @@
+table {
+  width: 90vw;
+  margin: 15px auto;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+td, th {
+  border: 1px solid #c0c0c0;
+  text-align: left;
+  padding: 15px;
+}
+
+.mission_name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  justify-content: flex-start;
+}
+
+button {
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid #c0c0c0;
+}
+
+button:hover {
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 10px;
+  color: black;
+  border: 1px solid black;
+}
+
+.description {
+  min-width: 50vw;
+  max-width: 60vw;
+}
