@@ -9,7 +9,8 @@ tr:nth-child(even) {
   background-color: #ddd;
 }
 
-td, th {
+td,
+th {
   border: 1px solid #c0c0c0;
   text-align: left;
   padding: 15px;
