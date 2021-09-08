@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   getRockets,
-  reserveRocket, //eslint-disable-line
+  reserveRocket,
   cancelReservation //eslint-disable-line
 }
   from '../redux/rockets/rocketsReducer';
@@ -11,6 +11,10 @@ import styles from './rockets.module.css';
 const Rockets = () => {
   const dispatch = useDispatch();
   const rocketsList = useSelector((state) => state.rockets);
+
+  const reserveRocketHandler = (id) => {
+    dispatch(reserveRocket(id));
+  };
 
   useEffect(() => {
     if (rocketsList.length === 0) {
@@ -27,8 +31,20 @@ const Rockets = () => {
           </li>
           <div className={styles.info}>
             <li>{rocket.name}</li>
-            <li className={styles.description}>{rocket.description}</li>
-            <button type="button">Reserve Rocket</button>
+
+            <li
+              className={styles.description}
+            >
+              {/* {reserved && (<span className={styles.reserved}>Reserved</span>)} */}
+              {rocket.description}
+            </li>
+
+            <button
+              type="button"
+              onClick={() => reserveRocketHandler(rocket.id)}
+            >
+              Reserve Rocket
+            </button>
           </div>
         </ul>
       ))}
