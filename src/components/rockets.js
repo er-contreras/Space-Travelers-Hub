@@ -16,6 +16,10 @@ const Rockets = () => {
     dispatch(reserveRocket(id));
   };
 
+  const cancelReservationHandler = (id) => {
+    dispatch(cancelReservation(id));
+  };
+
   useEffect(() => {
     if (rocketsList.length === 0) {
       dispatch(getRockets());
@@ -41,7 +45,14 @@ const Rockets = () => {
 
             <button
               type="button"
-              onClick={() => reserveRocketHandler(rocket.id)}
+              onClick={() => {
+                const { reserved } = rocket;
+                if (!reserved) {
+                  reserveRocketHandler(rocket.id);
+                } else {
+                  cancelReservationHandler(rocket.id);
+                }
+              }}
             >
               Reserve Rocket
             </button>
