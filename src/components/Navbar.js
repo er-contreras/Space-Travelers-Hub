@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import '../assets/styles/Navbar.css';
 import MyProfile from './myProfile';
+import Missions from './missionsList';
 import Rockets from './rockets';
 
 const Navbar = () => (
@@ -38,8 +39,8 @@ const Navbar = () => (
       <Route exact path="/">
         <Rockets />
       </Route>
-      <Route path="/mission">
-        {/* <Missions /> */}
+      <Route path="/missions">
+        <Missions />
       </Route>
       <Route path="/myProfile">
         <MyProfile />
