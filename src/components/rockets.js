@@ -6,6 +6,7 @@ import {
   cancelReservation //eslint-disable-line
 }
   from '../redux/rockets/rocketsReducer';
+import styles from './rockets.module.css';
 
 const Rockets = () => {
   const dispatch = useDispatch();
@@ -19,12 +20,18 @@ const Rockets = () => {
 
   return (
     <div>
-      {console.log(rocketsList)}
-      {/* {rocketsList.map((rocket) => (
-        <div>
-          <h2>Hello</h2>
-        </div>
-      ))} */}
+      {rocketsList.map((rocket) => (
+        <ul key={rocket.id}>
+          <li>
+            <img className={styles.images} alt="rocket img" src={rocket.flickr_images} />
+          </li>
+          <div className={styles.info}>
+            <li>{rocket.name}</li>
+            <li className={styles.description}>{rocket.description}</li>
+            <button type="button">Reserve Rocket</button>
+          </div>
+        </ul>
+      ))}
     </div>
   );
 };

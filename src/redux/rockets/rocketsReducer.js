@@ -10,10 +10,10 @@ const rocketsReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_ROCKETS:
       return action.payload;
-    case RESERVE_ROCKET: {
-      const newState = state.map((rocket) => (rocket.id !== action.payload
-        ? rocket
-        : { ...rocket, reserved: true }));
+      // case RESERVE_ROCKET: {
+      //   const newState = state.map((rocket) => (rocket.id !== action.payload
+      //     ? rocket
+      //     : { ...rocket, reserved: true }));
       // if (rocket.id !== action.payload) {
       //   return rocket;
       // }
@@ -22,22 +22,22 @@ const rocketsReducer = (state = initialState, action) => {
       //   reserved: true,
       // };
 
-      return newState;
-    }
-    case CANCEL_RESERVATION: {
-      const newState = state.map((rocket) => (rocket.id !== action.payload
-        ? rocket
-        : { ...rocket, reserved: false }));
-        // if (rocket.id !== action.payload) {
-        //   return rocket;
-        // }
-        // return {
-        //   ...rocket,
-        //   reserved: false,
-        // };
+      // return newState;
+      // }
+      // case CANCEL_RESERVATION: {
+      //   const newState = state.map((rocket) => (rocket.id !== action.payload
+      //     ? rocket
+      //     : { ...rocket, reserved: false }));
+      //     // if (rocket.id !== action.payload) {
+      //     //   return rocket;
+      //     // }
+      //     // return {
+      //     //   ...rocket,
+      //     //   reserved: false,
+      //     // };
 
-      return newState;
-    }
+      //   return newState;
+      // }
     default:
       return state;
   }
@@ -49,7 +49,7 @@ const getRocketsAction = (payload) => ({
 });
 
 export const getRockets = () => (dispatch) => {
-  spaceXAPI.getRockets().then((res) => {
+  spaceXAPI.getRocketsData().then((res) => {
     dispatch(getRocketsAction(
       res.map((rocket) => ({
         id: rocket.id,
