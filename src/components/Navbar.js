@@ -5,16 +5,16 @@ import {
   Route,
   NavLink,
 } from 'react-router-dom';
-import '../assets/styles/Navbar.css';
+import styles from '../assets/styles/Navbar.module.css';
 import MyProfile from './myProfile';
 import Missions from './missionsList';
 import Rockets from './rockets';
 
 const Navbar = () => (
   <Router>
-    <header>
-      <div className="logo_cnt">
-        <div className="logo" />
+    <header className={styles.navbarHeader}>
+      <div className={styles.logo_cnt}>
+        <div className={styles.logo} />
         <h1>
           Space Travelers Hub
         </h1>
@@ -22,14 +22,14 @@ const Navbar = () => (
       <nav>
         <ul>
           <li>
-            <NavLink to="/" activeClassName="link">Rockets</NavLink>
+            <NavLink to="/" activeClassName={styles.link}>Rockets</NavLink>
           </li>
           <li>
-            <NavLink to="/missions" activeClassName="link">Missions</NavLink>
+            <NavLink to="/missions" activeClassName={styles.link}>Missions</NavLink>
           </li>
-          <hr className="line" />
+          <hr className={styles.line} />
           <li>
-            <NavLink to="/myProfile" activeClassName="link">My Profile</NavLink>
+            <NavLink to="/myProfile" activeClassName={styles.link}>My Profile</NavLink>
           </li>
         </ul>
       </nav>
