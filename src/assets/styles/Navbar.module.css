@@ -1,9 +1,9 @@
 header {
   display: flex;
   justify-content: space-between;
-  height: 10vh;
+  height: 12vh;
   align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(161, 161, 161);
 }
 
 ul {
