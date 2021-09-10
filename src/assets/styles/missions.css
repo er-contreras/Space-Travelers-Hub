@@ -1,0 +1,80 @@
+table {
+  width: 90vw;
+  margin: 15px auto;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+td,
+th {
+  border: 1px solid #c0c0c0;
+  text-align: left;
+  padding: 15px;
+}
+
+.mission_name {
+  vertical-align: top;
+  width: 10vw;
+  font-weight: bold;
+  font-size: 1.2rem;
+  justify-content: flex-start;
+}
+
+.reserve_btn {
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 10px;
+  color: black;
+  border: 1px solid black;
+}
+
+.cancel_btn {
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid red;
+  color: red;
+}
+
+.cancel_btn:hover {
+  border: 1px solid #c0c0c0;
+}
+
+.reserve_btn:hover {
+  border: 1px solid #c0c0c0;
+}
+
+.description {
+  width: 80vw;
+}
+
+.btn_ctn {
+  width: 10vw;
+  height: 10vh;
+  text-align: center;
+}
+
+.member_cnt {
+  width: 10vw;
+  text-align: center;
+}
+
+.active_member {
+  color: #fff;
+  background-color: #0d98ba;
+  font-size: 1vw;
+  border-radius: 10px;
+  padding: 6px;
+}
+
+.inactive_member {
+  color: #fff;
+  background-color: gray;
+  font-size: 0.8vw;
+  border-radius: 10px;
+  padding: 6px;
+}

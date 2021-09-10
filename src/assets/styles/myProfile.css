@@ -1,0 +1,27 @@
+.profile-container {
+  margin: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.unit-list {
+  display: flex;
+  flex-direction: column;
+  max-width: 45vw;
+  border: 1px solid rgba(185, 185, 185, 0.552);
+}
+
+.reserved {
+  min-width: 45vw;
+}
+
+.reserved h2 {
+  margin: 0.5rem 0;
+}
+
+.reserved-li {
+  border-bottom: 1px solid rgba(185, 185, 185, 0.552);
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.15rem;
+}

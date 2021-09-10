@@ -1,0 +1,45 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  align-items: center;
+  border-bottom: 1px solid rgb(161, 161, 161);
+  padding: 2vh;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+ul > li {
+  margin: 0.5rem;
+}
+
+.logo_cnt {
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  border: 1px solid rgb(161, 161, 161);
+  height: 1.8vh;
+  margin: auto 0;
+}
+
+.logo {
+  background-image: url("../logo.png");
+  background-size: contain;
+  width: 4rem;
+  height: 4rem;
+}
+
+.link {
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(97, 174, 253);
+}
