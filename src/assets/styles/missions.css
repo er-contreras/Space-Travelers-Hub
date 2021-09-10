@@ -41,18 +41,10 @@ th {
 }
 
 .cancel_btn:hover {
-  background-color: transparent;
-  font-size: 1rem;
-  padding: 10px;
   border: 1px solid #c0c0c0;
-  color: red;
 }
 
-.reserve_btn:hover {
-  background-color: transparent;
-  font-size: 1rem;
-  padding: 10px;
-  color: black;
+.reserve_btn:hover {  
   border: 1px solid #c0c0c0;
 }
 
