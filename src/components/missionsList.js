@@ -1,27 +1,22 @@
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
-import { setMission, missionReserve, missionCancel } from '../redux/missions/missions';
+import { setMission, missionReserve } from '../redux/missions/missions';
 import '../assets/styles/missions.css';
 
 const Missions = () => {
-  const missionsList = useSelector((state) => state.missionsReducer.missions);
+  console.log('Body1');
   const dispatch = useDispatch();
-
-  const reserveHandler = (e) => {
-    const payload = e.target.parentNode.parentNode.id;
-    dispatch(missionReserve(payload));
-  };
-
-  const cancelHandler = (e) => {
-    const payload = e.target.parentNode.parentNode.id;
-    dispatch(missionCancel(payload));
-  };
+  const missionsList = useSelector((state) => state.missionsReducer);
 
   useEffect(() => {
-    if (!missionsList.length) {
+    if (!missionsList.missions.length) {
       dispatch(setMission());
     }
   }, []);
+
+  const reserveHandler = (payload) => {
+    dispatch(missionReserve(payload));
+  };
 
   return (
     <div>
@@ -32,7 +27,7 @@ const Missions = () => {
             <th>Description</th>
             <th colSpan="2">Status</th>
           </tr>
-          {(missionsList.map((mission) => (
+          {(missionsList.missions.map((mission) => (
             <tr key={mission.id} id={mission.id}>
               <td className="mission_name">{mission.name}</td>
               <td className="description">{mission.description}</td>
@@ -47,8 +42,8 @@ const Missions = () => {
               <td className="btn_ctn">
                 {
                   mission.reserved
-                    ? <button type="button" className="cancel_btn" onClick={cancelHandler}>Leave Mission</button>
-                    : <button type="button" className="reserve_btn" onClick={reserveHandler}>Join Mission</button>
+                    ? <button type="button" className="cancel_btn" onClick={() => { reserveHandler(mission.id); }}>Leave Mission</button>
+                    : <button type="button" className="reserve_btn" onClick={() => { reserveHandler(mission.id); }}>Join Mission</button>
                 }
               </td>
             </tr>

@@ -17,7 +17,6 @@ export const missionArray = (response) => {
       id: mission.mission_id,
       name: mission.mission_name,
       description: mission.description,
-      reserved: false,
     })));
   return initialState;
 };
@@ -49,15 +48,8 @@ const reducer = (state = initialState, action) => {
     }
     case RESERVE_MISSION: {
       const newState = state.missions.map((mission) => (mission.id !== action.payload
-        ? mission : { ...mission, reserved: true }));
-      initialState.missions = newState;
-      return initialState;
-    }
-    case CANCEL_MISSION: {
-      const newState = state.missions.map((mission) => (mission.id !== action.payload
-        ? mission : { ...mission, reserved: false }));
-      initialState.missions = newState;
-      return initialState;
+        ? mission : { ...mission, reserved: !mission.reserved }));
+      return { ...state, missions: newState };
     }
     default:
       return state;
