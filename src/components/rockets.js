@@ -56,7 +56,7 @@ const Rockets = () => {
                 }
               }}
             >
-              Reserve Rocket
+              {!rocket.reserved === true ? 'Reserved Rocket' : 'Cancel Reservation'}
             </button>
           </div>
         </ul>

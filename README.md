@@ -51,7 +51,7 @@ Mobile ScreenShots
 👤 **Christian Erick Contreras**
 
 - GitHub: [@eri8-9](https://github.com/eri8-9)
-- Linkedin: [LinkedIn](https:linkedin.com/in/christian-erick-contreras-9945b820b)
+- Linkedin: [LinkedIn](https://www.linkedin.com/in/christian-erick-contreras-9945b820b/)
 - Twitter: [@ChristianErick_](https://twitter.com/ChristianErick_)
 
 👤 **Guilherme Giachellin**
