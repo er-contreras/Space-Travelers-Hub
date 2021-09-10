@@ -3,7 +3,6 @@ const url = 'https://api.spacexdata.com/v3/missions';
 // ACTIONS
 const SET_MISSION = 'missionsStore/missions/SET_MISSION';
 const RESERVE_MISSION = 'missionsStore/missions/RESERVE_MISSION';
-const CANCEL_MISSION = 'missionsStore/missions/CANCEL_MISSION';
 
 const initialState = {
   missions: [],
@@ -23,11 +22,6 @@ export const missionArray = (response) => {
 
 export const missionReserve = (payload) => ({
   type: RESERVE_MISSION,
-  payload,
-});
-
-export const missionCancel = (payload) => ({
-  type: CANCEL_MISSION,
   payload,
 });
 
