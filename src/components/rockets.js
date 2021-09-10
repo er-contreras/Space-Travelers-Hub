@@ -11,7 +11,6 @@ import styles from './rockets.module.css';
 const Rockets = () => {
   const dispatch = useDispatch();
   const rocketsList = useSelector((state) => state.rockets);
-
   const reserveRocketHandler = (id) => {
     dispatch(reserveRocket(id));
   };
