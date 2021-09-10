@@ -4,7 +4,7 @@
 
 > Build a page that shows missions and rockets feched from the SpaceX api and allows the user to reserve both missions and rockets.
 
-<div align="center"><img src="./spaceX.png" width="500"/></div>
+<div align="center"><img src="./spaceX.png" width="700"/></div>
 
 ![image](https://user-images.githubusercontent.com/81584449/132874276-9bab7d78-ad21-443d-9cf0-f4ccc628d929.png)
 
