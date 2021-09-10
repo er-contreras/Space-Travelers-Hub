@@ -17,10 +17,6 @@ Mobile ScreenShots
 - JavaScript.
 - SpaceX api
 
- ## Live Demo
-
-[Live Demo Link](https://eri8-9.github.io/react-app/#/home)
-
 ## Video
 
 [Link](https://www.loom.com/share/a451a571209c414b8663b7d8a2a812ba) to video on Loom.
