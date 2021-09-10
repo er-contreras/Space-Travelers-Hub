@@ -1,26 +1,34 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Bookstore
+# Space Traveler Hub
 
-> Build Bookstore with React and Redux.
+> Build a page that shows missions and rockets feched from the SpaceX api and allows the user to reserve both missions and rockets.
 
 <div align="center"><img src="./spaceX.png" width="500"/></div>
+
+![image](https://user-images.githubusercontent.com/81584449/132874276-9bab7d78-ad21-443d-9cf0-f4ccc628d929.png)
 
 Mobile ScreenShots
 
 ## Built With
 
-- React & JavaScript
+- React.
+- Redux.
+- JavaScript.
+- SpaceX api
 
-<!-- ## Live Demo
+ ## Live Demo
 
 [Live Demo Link](https://eri8-9.github.io/react-app/#/home)
-[Heroku](https://math-magicians-0.herokuapp.com/)
-[Netlify](https://eager-euclid-20253f.netlify.app/) -->
 
 ## Getting Started
 
+## Video
+
+[Link](https://www.loom.com/share/a451a571209c414b8663b7d8a2a812ba) to video on Loom.
+
 ### Prerequisites
+
   - Read about [React](https://reactjs.org/docs/getting-started.html) before start.
   - Just follow the steps for Getting started, Asset Managment(optional), Output Management and Development (Install the webpack-dev-server)
 
@@ -28,14 +36,21 @@ Mobile ScreenShots
   - Better have [VS Code](https://code.visualstudio.com/) installed or install the source-code editor of your preference. 
 
 ### Install
+
   - In the terminal go to the folder you going to work and write the next. 
   ```
   git clone https://github.com/eri8-9/Space-Travelers-Hub.git
   ```
   - Next go to VS Code editor and open the folder where you installed the repository.
 ### Usage
-  - Don't forget to create a branch to star working on the project.
-  - Now that you have everything set up you are ready to work.
+
+- Clone the repo.
+
+- Run `npm install` on your terminal.
+
+- Run `npm run build` on your terminal.
+
+- Open the terminal in your machine and run `npm start` to start server.
 
 ## Authors
 
@@ -49,6 +64,12 @@ Mobile ScreenShots
 
 - GitHub: [GuilhermeGiachellin](https://github.com/GuilhermeGiachellin)
 - Linkedin: [LinkedIn](https://www.linkedin.com/in/guilherme-giachellin-2599771b9/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/eri8-9/Space-Travelers-Hub/issues).
 
 ## Show your support
 
