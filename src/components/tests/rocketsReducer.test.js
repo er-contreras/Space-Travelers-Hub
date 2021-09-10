@@ -13,13 +13,12 @@ describe('Reserve rocket test', () => {
         id: '1',
         reserved: false,
       },
-    ]
+    ];
     expect(rocketsReducer(exampleInitialState, reserveRocket('1'))).toEqual([
       {
         id: '1',
         reserved: true,
       },
-    ],
-    );
+    ]);
   });
 });
