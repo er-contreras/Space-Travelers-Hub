@@ -19,7 +19,7 @@ Mobile ScreenShots
 
 ## Video
 
-[Link](https://www.loom.com/share/a451a571209c414b8663b7d8a2a812ba) to video on Loom.
+[Link](https://www.loom.com/share/14da83df87cd4360b96f27752ee04e94) to video on Loom.
 
 ### Prerequisites
 
