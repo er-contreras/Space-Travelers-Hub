@@ -4,7 +4,6 @@ import { setMission, missionReserve } from '../redux/missions/missions';
 import '../assets/styles/missions.css';
 
 const Missions = () => {
-  console.log('Body1');
   const dispatch = useDispatch();
   const missionsList = useSelector((state) => state.missionsReducer);
 
